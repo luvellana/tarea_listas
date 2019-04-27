@@ -22,18 +22,18 @@
         android:paddingEnd="@dimen/space_lg">
 
         <TextView
-            android:id="@+id/sontTitle"
+            android:id="@+id/nombrePlato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mi cancion"
+            android:text="Plato"
             android:textSize="@dimen/title"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/songArtist"
+            android:id="@+id/precio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mi artista"
+            android:text="precio"
             android:textSize="@dimen/subtitle" />
     </LinearLayout>
 

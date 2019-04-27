@@ -40,19 +40,19 @@ public class FoodAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View vista, ViewGroup parent) {
         ViewHolder viewHolder;
-        if (vista == null) { //No se puede reciclar
+        if (vista == null) {
             viewHolder = new ViewHolder();
 
-            //Inflater nos permite usar un layout dentro de un componente
+
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            vista = inflater.inflate(R.layout.layout_song, null); //Cual layout y principal o no.
+            vista = inflater.inflate(R.layout.layout_song, null);
 
             viewHolder.image = vista.findViewById(R.id.image);
             viewHolder.precio = vista.findViewById(R.id.songArtist);
             viewHolder.nombrePlato = vista.findViewById(R.id.sontTitle);
-            vista.setTag(viewHolder); //Guardar para reciclar
+            vista.setTag(viewHolder);
         } else {
-            viewHolder = (ViewHolder) vista.getTag(); //Obtener el dato reciclado
+            viewHolder = (ViewHolder) vista.getTag();
         }
 
         Food cancionActual = items.get(position);

@@ -2,29 +2,21 @@ package com.luvellana.tarea_listas;
 
         import android.content.Context;
         import android.content.Intent;
-        import android.provider.SyncStateContract;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.view.View;
         import android.widget.AdapterView;
-        import android.widget.ArrayAdapter;
         import android.widget.ListView;
-        import android.widget.Spinner;
-        import android.widget.Toast;
-
 
         import com.google.gson.Gson;
 
         import java.util.ArrayList;
         import java.util.List;
-        import com.luvellana.tarea_listas.FoodAdapter;
-        import com.luvellana.tarea_listas.Food;
 
 public class ListaActivity extends AppCompatActivity {
 
     private Context mContext;
 
-    private Spinner menu;
     private ListView platos;
     private FoodAdapter FoodAdapter;
 
@@ -59,7 +51,17 @@ public class ListaActivity extends AppCompatActivity {
 
     private void addEvents() {
 
-        
-
+        platos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Food plato = foodArray.get(position);
+                Intent intent = new Intent(mContext, PlayActivity.class);
+                intent.putExtra(Constants.KEY_PLATO, new Gson().toJson(plato));
+                startActivity(intent);
+            }
+        });
     }
+
+
+
 }
