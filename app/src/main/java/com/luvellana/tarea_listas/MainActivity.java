@@ -29,13 +29,13 @@ public class ListaActivity extends AppCompatActivity {
         mContext = this;
 
         foodArray.add(new Food(1, R.drawable.hamburguesas , "Hamburguesa", 20.50));
-        foodArray.add(new Food(1, R.drawable.alitas , "Alitas", 25.40));
-        foodArray.add(new Food(1, R.drawable.hot_dog , "Hot Dog", 12.60));
-        foodArray.add(new Food(1, R.drawable.nuggets , "Nuggets", 18.99));
-        foodArray.add(new Food(1, R.drawable.papas , "Papas", 11.70));
-        foodArray.add(new Food(1, R.drawable.pollo_frito , "Pollo Frito", 28.90));
-        foodArray.add(new Food(1, R.drawable.salchipapas , "Salchipapas", 15.30));
-        foodArray.add(new Food(1, R.drawable.sandwich , "Sandwich", 26.30));
+        foodArray.add(new Food(2, R.drawable.alitas , "Alitas", 25.40));
+        foodArray.add(new Food(3, R.drawable.hot_dog , "Hot Dog", 12.60));
+        foodArray.add(new Food(4, R.drawable.nuggets , "Nuggets", 18.99));
+        foodArray.add(new Food(5, R.drawable.papas , "Papas", 11.70));
+        foodArray.add(new Food(6, R.drawable.pollo_frito , "Pollo Frito", 28.90));
+        foodArray.add(new Food(7, R.drawable.salchipapas , "Salchipapas", 15.30));
+        foodArray.add(new Food(8, R.drawable.sandwich , "Sandwich", 26.30));
 
         initViews();
         addEvents();
